@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button=(Button)findViewById(R.id.button);
 
-
+       tel = (TelephonyManager)this.getSystemService(Context.TELEPHONY_SERVICE);
        int permission = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_PHONE_STATE);
         if(permission != PackageManager.PERMISSION_GRANTED) {
